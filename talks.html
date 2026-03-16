@@ -126,6 +126,35 @@
             font-size: 0.85em;
         }
         footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        .section-nav {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .section-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .section-nav a.active-tab {
+            background: var(--primary);
+            color: #fff;
+        }
+        .section-nav a.inactive-tab {
+            background: var(--light);
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+        .section-nav a.inactive-tab:hover {
+            background: var(--primary);
+            color: #fff;
+        }
         @media (max-width: 600px) {
             nav a { margin: 0 8px; font-size: 0.85em; }
             .container { padding: 0 16px; }
@@ -142,34 +171,38 @@
 
     <section>
         <div class="container">
-            <h2>Selected Invited Talks</h2>
+            <div class="section-nav">
+                <a href="#talks" class="active-tab"><i class="fas fa-microphone"></i> Invited Talks</a>
+                <a href="#media" class="inactive-tab"><i class="fas fa-newspaper"></i> Media &amp; Podcasts</a>
+            </div>
+            <h2 id="talks">Selected Invited Talks</h2>
 
             <div class="year-header">2026</div>
             <ul class="talk-list">
                 <li><strong>The Reading Brain in the Age of AI: An Evidence-Based Perspective.</strong> <a href="https://www.thereadingleague.org/conference/" target="_blank">The Reading League, 10th Annual Conference</a>, Chicago, IL. October 2026.</li>
                 <li><strong>The Dyslexia Foundation, 22nd Extraordinary Brain Symposium.</strong> <a href="https://dyslexiafoundation.org/esb-symposia-archives/" target="_blank">El Convento, Old San Juan, Puerto Rico</a>. June 2026.</li>
                 <li><strong>Neurocognitive Foundations of Literacy: Typical Development and Dyslexia.</strong> Center for Educational Neuroscience Applications (CENA), Bridgewater State University. April 2026.</li>
-                <li><strong>(Not so) universal literacy screening: The leaky pipeline from identification to instruction - and can AI help?</strong> <a href="https://righttoreadproject.com/lunch-lit-3/" target="_blank">Lunch &amp; Lit Online Lecture</a>, Right to Read. February 2026.</li>
-                <li><strong>From brain to policy: Building evidence-based systems for better literacy outcomes.</strong> PREREQ Seminar, Boston University. February 2026.</li>
+                <li><strong>(Not So) Universal Literacy Screening: The Leaky Pipeline from Identification to Instruction - and Can AI Help?</strong> <a href="https://righttoreadproject.com/lunch-lit-3/" target="_blank">Lunch &amp; Lit Online Lecture</a>, Right to Read. February 2026.</li>
+                <li><strong>From Brain to Policy: Building Evidence-Based Systems for Better Literacy Outcomes.</strong> PREREQ Seminar, Boston University. February 2026.</li>
             </ul>
 
             <div class="year-header">2025</div>
             <ul class="talk-list">
-                <li><strong>From early development to practice: The neurocognitive foundations of literacy.</strong> <a href="https://childmind.org/visiting-professor-lecture-series/" target="_blank">Child Mind Institute Visiting Professor Lecture Series</a>, New York, NY. December 2025.</li>
-                <li><strong>Explicit instruction to build vocabulary knowledge for reading comprehension.</strong> <a href="https://dyslexiafoundation.org/category/tdfconference/" target="_blank">The Dyslexia Foundation Conference</a>, Boston, MA. October 2025.</li>
-                <li><strong>Navigating tomorrow: Embracing AI across the curriculum.</strong> Annual Zelma Wynn Symposium, Summit School, Edgewater, MD. October 2025.</li>
-                <li><strong>Neural systems underlying reading comprehension: Language and beyond.</strong> <a href="https://podcasts.apple.com/us/podcast/dr-ola-ozernov-palchik-on-neuroscience-literacy-scalable/id1614519794?i=1000721154686" target="_blank">Big Sky Literacy Summit</a>, Big Sky, MT. August 2025.</li>
-                <li><strong>Developing vocabulary knowledge through text-supplemented audiobooks and scalable human and AI tutoring.</strong> <a href="https://podcasts.apple.com/us/podcast/dr-ola-ozernov-palchik-on-neuroscience-literacy-scalable/id1614519794?i=1000721154686" target="_blank">Big Sky Literacy Summit</a>, Big Sky, MT. August 2025.</li>
-                <li><strong>Smart Start: Leveraging technology to detect and support learning differences early.</strong> Campaign for Grade-Level Reading (CGLR). June 2025.</li>
-                <li><strong>Reverse-engineering human tutoring: Building scalable AI for literacy.</strong> MIT Lincoln Laboratory, Lexington, MA. May 2025.</li>
-                <li><strong>The neuroscience of reading: Tracing literacy from language to comprehension.</strong> Annual Zelma Wynn Symposium, Summit School, Edgewater, MD. March 2025.</li>
-                <li><strong>Reading to learn, learning to engage.</strong> Thriving in the Middle School Years: BU Wheelock Forum, Boston University. February 2025.</li>
+                <li><strong>From Early Development to Practice: The Neurocognitive Foundations of Literacy.</strong> <a href="https://childmind.org/visiting-professor-lecture-series/" target="_blank">Child Mind Institute Visiting Professor Lecture Series</a>, New York, NY. December 2025.</li>
+                <li><strong>Explicit Instruction to Build Vocabulary Knowledge for Reading Comprehension.</strong> <a href="https://dyslexiafoundation.org/category/tdfconference/" target="_blank">The Dyslexia Foundation Conference</a>, Boston, MA. October 2025.</li>
+                <li><strong>Navigating Tomorrow: Embracing AI Across the Curriculum.</strong> Annual Zelma Wynn Symposium, Summit School, Edgewater, MD. October 2025.</li>
+                <li><strong>Neural Systems Underlying Reading Comprehension: Language and Beyond.</strong> <a href="https://podcasts.apple.com/us/podcast/dr-ola-ozernov-palchik-on-neuroscience-literacy-scalable/id1614519794?i=1000721154686" target="_blank">Big Sky Literacy Summit</a>, Big Sky, MT. August 2025.</li>
+                <li><strong>Developing Vocabulary Knowledge Through Text-Supplemented Audiobooks and Scalable Human and AI Tutoring.</strong> <a href="https://podcasts.apple.com/us/podcast/dr-ola-ozernov-palchik-on-neuroscience-literacy-scalable/id1614519794?i=1000721154686" target="_blank">Big Sky Literacy Summit</a>, Big Sky, MT. August 2025.</li>
+                <li><strong>Smart Start: Leveraging Technology to Detect and Support Learning Differences Early.</strong> Campaign for Grade-Level Reading (CGLR). June 2025.</li>
+                <li><strong>Reverse-Engineering Human Tutoring: Building Scalable AI for Literacy.</strong> MIT Lincoln Laboratory, Lexington, MA. May 2025.</li>
+                <li><strong>The Neuroscience of Reading: Tracing Literacy from Language to Comprehension.</strong> Annual Zelma Wynn Symposium, Summit School, Edgewater, MD. March 2025.</li>
+                <li><strong>Reading to Learn, Learning to Engage.</strong> Thriving in the Middle School Years: BU Wheelock Forum, Boston University. February 2025.</li>
             </ul>
 
             <div class="year-header">2024</div>
             <ul class="talk-list">
-                <li><strong>Neuroscience of reading.</strong> The Dyslexia Foundation Conference, MGH Institute of Health Professions, Boston, MA. November 2024.</li>
-                <li><strong>Investigating the neurocognitive substrates of typical and atypical literacy development.</strong> University of Texas at Dallas. November 2024.</li>
+                <li><strong>Neuroscience of Reading.</strong> The Dyslexia Foundation Conference, MGH Institute of Health Professions, Boston, MA. November 2024.</li>
+                <li><strong>Investigating the Neurocognitive Substrates of Typical and Atypical Literacy Development.</strong> University of Texas at Dallas. November 2024.</li>
             </ul>
 
             <div class="year-header">2023</div>
@@ -177,30 +210,34 @@
                 <li><strong>Harnessing Technology to Advance Education.</strong> XtraordinaryPeople, NYC. November 2023.</li>
                 <li><strong>Towards Precise and Adaptive Education through AI Integration.</strong> Symposium on Improving the Lives of Families and Children, MIT. October 2023.</li>
                 <li><strong>Open-Source Infrastructure for Student Learning Disability Identification and Treatment.</strong> Red Hat North America Research Interest Group Meeting. October 2023.</li>
-                <li><strong>Cognitive and neural substrates of typical and atypical reading development.</strong> NWEA Meeting. March 2023.</li>
+                <li><strong>Cognitive and Neural Substrates of Typical and Atypical Reading Development.</strong> NWEA Meeting. March 2023.</li>
                 <li><strong>Teaching Reading in Contentious Times: Panel Discussion.</strong> Brandeis University, Waltham, MA. September 2023.</li>
             </ul>
 
             <div class="year-header">2017-2022</div>
             <ul class="talk-list">
-                <li><strong>Reading development and developmental dyslexia.</strong> Harvard University. April 2022.</li>
-                <li><strong>Neurocognitive mechanisms of individual differences in reading comprehension.</strong> University of Alabama at Birmingham. March 2022.</li>
-                <li><strong>Neurocognitive mechanisms of individual differences in reading comprehension.</strong> Florida State University. February 2022.</li>
-                <li><strong>Neurocognitive mechanisms of individual differences in reading comprehension.</strong> Vanderbilt University. February 2022.</li>
-                <li><strong>Comprehending the same, differently.</strong> Department of Psychology, Tufts University. September 2021.</li>
-                <li><strong>Neural underpinnings of language comprehension in dyslexia.</strong> Boston Children's Hospital. February 2020.</li>
-                <li><strong>From early identification to comprehension: Using neuroimaging to study reading.</strong> <a href="https://dyslexiaida.org/award-recipients/" target="_blank">International Dyslexia Association</a>, Portland, OR. November 2019.</li>
-                <li><strong>Why children fail to learn to read.</strong> Safra Brain Research Center, Hebrew University, Jerusalem, Israel. October 2018.</li>
+                <li><strong>Reading Development and Developmental Dyslexia.</strong> Harvard University. April 2022.</li>
+                <li><strong>Neurocognitive Mechanisms of Individual Differences in Reading Comprehension.</strong> University of Alabama at Birmingham. March 2022.</li>
+                <li><strong>Neurocognitive Mechanisms of Individual Differences in Reading Comprehension.</strong> Florida State University. February 2022.</li>
+                <li><strong>Neurocognitive Mechanisms of Individual Differences in Reading Comprehension.</strong> Vanderbilt University. February 2022.</li>
+                <li><strong>Comprehending the Same, Differently.</strong> Department of Psychology, Tufts University. September 2021.</li>
+                <li><strong>Neural Underpinnings of Language Comprehension in Dyslexia.</strong> Boston Children's Hospital. February 2020.</li>
+                <li><strong>From Early Identification to Comprehension: Using Neuroimaging to Study Reading.</strong> <a href="https://dyslexiaida.org/award-recipients/" target="_blank">International Dyslexia Association</a>, Portland, OR. November 2019.</li>
+                <li><strong>Why Children Fail to Learn to Read.</strong> Safra Brain Research Center, Hebrew University, Jerusalem, Israel. October 2018.</li>
                 <li><strong>Linking Rhythm Processing and Reading Development.</strong> Games for Change Festival, New York, NY. June 2018.</li>
-                <li><strong>Cognitive links between rhythm perception and reading.</strong> Inaugural National Dyslexia Symposium, MIT. February 2018.</li>
-                <li><strong>Neurological differences in dyslexia and literacy.</strong> <a href="https://dyslexiafoundation.org/esb-symposia-archives/" target="_blank">The Dyslexia Foundation Conference</a>, Harvard Medical School. November 2017.</li>
+                <li><strong>Cognitive Links Between Rhythm Perception and Reading.</strong> Inaugural National Dyslexia Symposium, MIT. February 2018.</li>
+                <li><strong>Neurological Differences in Dyslexia and Literacy.</strong> <a href="https://dyslexiafoundation.org/esb-symposia-archives/" target="_blank">The Dyslexia Foundation Conference</a>, Harvard Medical School. November 2017.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h2>Media &amp; Podcasts</h2>
+            <div class="section-nav">
+                <a href="#talks" class="inactive-tab"><i class="fas fa-microphone"></i> Invited Talks</a>
+                <a href="#media" class="active-tab"><i class="fas fa-newspaper"></i> Media &amp; Podcasts</a>
+            </div>
+            <h2 id="media">Media &amp; Podcasts</h2>
 
             <div class="year-header">2026</div>
             <div class="media-card">
