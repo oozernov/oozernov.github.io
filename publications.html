@@ -3,85 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Ola Ozernov-Palchik, PhD</title>
+    <title>Publications - Ola Ozernov-Palchik, Ph.D.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        :root {
+            --primary: #1a3a5c;
+            --accent: #c41230;
+            --text: #333;
+            --light: #f7f8fa;
+            --border: #e0e4e8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fff;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
-        h1 {
+        nav {
+            background: var(--primary);
+            padding: 14px 0;
             text-align: center;
-            color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        p {
-            margin-bottom: 20px;
-        }
-        a {
-            color: #0066cc;
+        nav a {
+            color: #fff;
             text-decoration: none;
+            margin: 0 18px;
+            font-size: 0.95em;
+            letter-spacing: 0.3px;
+            transition: opacity 0.2s;
         }
-        a:hover {
-            text-decoration: underline;
+        nav a:hover { opacity: 0.8; }
+        nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 50px 0; }
+        h2 {
+            color: var(--primary);
+            font-size: 1.5em;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .scholar-link {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8edf2 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 32px;
+            font-size: 0.95em;
         }
-        li {
-            margin-bottom: 10px;
+        .scholar-link a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .scholar-link a:hover { text-decoration: underline; }
+        .pub-list { list-style: none; padding: 0; }
+        .pub-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.93em;
+        }
+        .pub-list li:last-child { border-bottom: none; }
+        .pub-list a { color: var(--accent); text-decoration: none; }
+        .pub-list a:hover { text-decoration: underline; }
+        .year-label {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.78em;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--light);
+            color: var(--primary);
+            font-size: 0.75em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-left: 6px;
+        }
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 24px;
+            font-size: 0.85em;
+        }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        @media (max-width: 600px) {
+            nav a { margin: 0 8px; font-size: 0.85em; }
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="publications.html">Publications</a> |
-        <a href="cv.html">CV</a> |
-        <a href="talks.html">Science Communication</a>
+        <a href="index.html">Home</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="talks.html">Talks</a>
     </nav>
 
-    <div class="container">
-        <h1>Publications</h1>
-        <p>You can view all my publications on <a href="https://scholar.google.com/citations?user=JG4SKDsAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>.</p>
-        
-        <h2>Selected Publications</h2>
-        <ul>
-            <li><strong>Ozernov-Palchik, O.</strong>, Pollack, C., Bonawitz, E., Christodoulou, J. A., Gaab, N., Gabrieli, J., ... & Nelson, C. A. (2023). Reflections on the past two decades of Mind, Brain, and Education.</li>
-            <li><strong>Ozernov-Palchik, O*.</strong>, Qi, Z., Beach, S.D., Centanni, T., Gabrieli, J.D.E. (2023). Procedural and statistical learning in individuals with dyslexia. Neuropsychologia.</li>
-            <li>Treves, I. N., Olson, H. A., <strong>Ozernov-Palchik, O.</strong>, Li, C. E., Wang, K. L., Arechiga, X. M., ... & Gabrieli, J. D. (2023). At-Home use of App-Based Mindfulness for Children: A Randomized Active-Controlled Trial. Mindfulness, 1-17.</li>
-            <li>Treves, I. N., Li, C. E., Wang, K. L., <strong>Ozernov-Palchik, O.</strong>, Olson, H. A., & Gabrieli, J. D. (2023). Mindfulness supports emotional resilience in children during the COVID-19 Pandemic. Plos one, 18(7), e0278501.</li>
-            <li><strong>Ozernov‐Palchik, O.</strong>, Sury, D., Turesky, T. K., Yu, X., & Gaab, N. (2023). Longitudinal changes in brain activation underlying reading fluency. Human Brain Mapping, 44(1), 18-34.</li>
-            <li><strong>Ozernov-Palchik, O*.</strong>, Sideridis, G. D., Norton, E. S., Beach, S. D., Wolf, M., Gabrieli, J. D., & Gaab, N. (2022). On the cusp of predictability: Disruption in the typical association between letter and word identification at critical thresholds of RAN and phonological skills. Learning and Individual Differences, 97, 102166.</li>
-            <li>Davison, K. E., Zuk, J., Mullin, L. J., <strong>Ozernov-Palchik, O.</strong>, Norton, E., Gabrieli, J., ... & Gaab, N. (2022). Examining the relationship between shared book reading at home, white matter organization in kindergarten, and subsequent language and reading abilities: a longitudinal investigation. Journal of Cognitive Neuroscience.</li>
-            <li>Beach, S. D., <strong>Ozernov-Palchik, O.</strong>, May, S. C., Centanni, T. M., Perrachione, T. K., Pantazis, D., & Gabrieli, J. D. (2022). The Neural Representation of a Repeated Standard Stimulus in Dyslexia. Frontiers in Human Neuroscience, 283.</li>
-            <li><strong>Ozernov-Palchik*, O.</strong>, Olson*, H. A., Arechiga, X. M., Kentala, H., Solorio-Fielder, J. L., Camacho Torres, Y., Gardino, N. D., Deffenbach, J. R., Gabrieli, J. D. E. (2022). A Developmental Researcher's Guide to Remote Intervention Studies. Frontiers in Psychology: Developmental Psychology doi: 10.31234/osf.io/k9632.</li>
-            <li><strong>Ozernov-Palchik, O.</strong>, Beach, S. D., Brown, M., Centanni, T., Gaab, N., Kuperberg, G., ... & Gabrieli, J. (In Press). Speech-specific perceptual adaptation deficits in children and adults with dyslexia. Journal of Experimental Psychology: General. 10.31234/osf.io/4n5ec.</li>
-            <li><strong>Ozernov-Palchik, O.</strong>, Centanni, T. M., Beach, S. D., May, S., Hogan, T., & Gabrieli, J. D. (2021). Distinct neural substrates of individual differences in components of reading comprehension in adults with or without dyslexia. NeuroImage, 226, 117570.</li>
-            <li>Norton, E. S., Beach, S. D., Eddy, M. D., McWeeny, S., <strong>Ozernov-Palchik, O.</strong>, Gaab, N., & Gabrieli, J. D. (2021). ERP mismatch negativity amplitude and asymmetry reflect phonological and rapid automatized naming skills in English-speaking kindergartners. Frontiers in Human Neuroscience, 15, 236.</li>
-            <li>Beach, S. D., <strong>Ozernov-Palchik, O.</strong>, May, S. C., Centanni, T. M., Gabrieli, J. D., & Pantazis, D. (2021). Neural Decoding Reveals Concurrent Phonemic and Subphonemic Representations of Speech Across Tasks. Neurobiology of Language, 2(2), 254-279.</li>
-            <li>Centanni, T. M., Beach, S. D., <strong>Ozernov-Palchik, O.</strong>, May, S., Pantazis, D., & Gabrieli, J. D. (2022). Categorical perception and influence of attention on neural consistency in response to speech sounds in adults with dyslexia. Annals of Dyslexia, 1-23.</li>
-            <li>Zuk, J., Dunstan, J., Norton, E., Yu, X., <strong>Ozernov-Palchik, O.</strong>, Wang, Y., Hogan, T., Gabrieli, J.D.E & Gaab, N.  (2020). Multifactorial pathways facilitate resilience among kindergarteners at risk for dyslexia: A longitudinal behavioral and neuroimaging study. Developmental Science.</li>
-            <li>Yu, X., Zuk, J., Perdue, M. V., <strong>Ozernov-Palchik, O.</strong>, Raney, T., Beach, S. D., ... & Gaab, N. (2020). Putative protective neural mechanisms in pre-readers with a family history of dyslexia who subsequently develop typical reading skills. Human Brain Mapping.</li>
-            <li>Centanni, T. M., Norton, E. S., <strong>Ozernov-Palchik, O.</strong>, Park, A., Beach, S.D., Halverson, K., Gaab, N., Gabrieli, J. D. E. (2019). Disrupted left fusiform response to print in beginning kindergartners is associated with subsequent reading. NeuroImage: Clinical, 22, 101715.</li>
-            <li><strong>Ozernov‐Palchik, O.</strong>, Norton, E. S., Wang, Y., Beach, S. D., Zuk, J., Wolf, M., & Gaab, N. (2019). The relationship between socioeconomic status and white matter microstructure in pre‐reading children: A longitudinal investigation. Human Brain Mapping.</li>
-            <li><strong>Ozernov-Palchik, O.</strong> & Gabrieli, J. D. E. (2018). Neuroimaging, Early identification, and personalized intervention for developmental dyslexia. Perspectives on Language—Summer 2018.</li>
-            <li><strong>Ozernov-Palchik, O.</strong>, Wolf, M., & Patel, A.D. (2018). Relationships between early literacy and nonlinguistic rhythmic processes in kindergarteners. Journal of Experimental Child Psychology.</li>
-            <li><strong>Ozernov-Palchik, O.</strong> & Patel, A.D. (2018). Musical rhythm and reading development: Does beat matter? The New York Academy of Sciences 1423, 166-175.</li>
-            <li>Centanni, T. M., Norton, E. S., Park, A., Beach, S.D., Halverson, K., <strong>Ozernov-Palchik, O.</strong>, Gaab, N., Gabrieli, J. D. E. (2018). Letter selectivity in fusiform gyrus is related to letter identification and word-reading ability in kindergarten children. Developmental science 21, no. 5 (2018): e12658.</li>
-            <li>Yu, X., Raney, T., Perdue, M. V., Zuk, J., <strong>Ozernov-Palchik, O.</strong>, Becker, B .L. C., Raschle, N. M., & Gaab, N. (2018). Emergence of the neural network underlying phonological processing from the pre-reading to the emergent reading stage: A longitudinal study. Human Brain Mapping.</li>
-            <li>Zuk, J., Bishop-Liebler, P., <strong>Ozernov-Palchik, O.</strong>, Moore, E., Overy, K., Welch, G., & Gaab, N. (2017). Revisiting the “enigma” of musicians with dyslexia: Auditory sequencing and speech abilities. Journal of Experimental Psychology: General.</li>
-            <li><strong>Ozernov-Palchik, O.</strong> & Gaab, N. (2016). Lessons to be learned: How a comprehensive neurobiological model of atypical reading development can inform educational practice and policy. Current Opinion in Behavioral Sciences (special issue on Neuroscience of Education).</li>
-            <li><strong>Ozernov-Palchik, O.</strong>, Norton, E.S., Sideris, G., Beach, S., Wolf, M., Gabrieli, J.D.E., Gaab, N. (2016). Longitudinal stability of pre-reading skill profiles of kindergarten children: Implications for early screening and theories of reading. Developmental Science.</li>
-            <li><strong>Ozernov-Palchik, O.</strong> & Gaab, N. (2016). Tackling the “dyslexia paradox” with the help of neuroimaging. Perspectives on Language and Literacy.</li>
-            <li><strong>Ozernov-Palchik, O.</strong> & Gaab, N. (2016). Tackling the “dyslexia paradox”: Reading brain and behavior for early markers of developmental dyslexia. Wiley Interdisciplinary Reviews: Cognitive Science.</li>
-            <li>Norton, E. S., Saygin, Z. M., Osher, D. E., Beach, S.D., Cyr, A.B., <strong>Ozernov-Palchik, O.</strong>, Yendiki, A., Fischi, B., Gaab, N., Gabrieli, J. D. E. (2013). Tracking the roots of reading ability: White matter volume and integrity correlate with phonological awareness in kindergarten children. Journal of Neuroscience, 33(33), 13251-13258.</li>
-            <li>Zuk*, J., <strong>Ozernov-Palchik*, O.</strong>, Kim, H., Lakshminarayanan, K., Gabrieli, J. D., Tallal, P., & Gaab, N. (2013). Enhanced syllable discrimination thresholds in musicians. PloS one, 8(12), e80546.</li>
-        </ul>
-    </div>
+    <section>
+        <div class="container">
+            <h2>Publications</h2>
+
+            <div class="scholar-link">
+                <i class="fas fa-graduation-cap"></i> View full citation metrics on <a href="https://scholar.google.com/citations?user=JG4SKDsAAAAJ" target="_blank">Google Scholar</a>
+            </div>
+
+            <h3 style="color:var(--primary);margin-bottom:16px;">Refereed Journal Articles</h3>
+            <ul class="pub-list">
+                <li><span class="year-label">In Press</span> Olson, H.*, <strong>Ozernov-Palchik, O.*</strong>, Arechiga, X., &amp; Gabrieli, J.D.E. Improvements on proximal vocabulary measures do not generalize to distal reading comprehension measures in a randomized controlled trial of a storybook and tutoring intervention. <em>Journal of Research on Educational Effectiveness</em>. <a href="https://osf.io/zac9d/">OSF</a></li>
+
+                <li><span class="year-label">In Press</span> <strong>Ozernov-Palchik, O.*</strong>, O'Brien, A. M.*, Lee, E. J., Richardson, H., Romeo, R., Lipkin, B., ... &amp; Fedorenko, E. Precision fMRI reveals that the language-selective network is established in early childhood. <em>Developmental Science</em>.</li>
+
+                <li><span class="year-label">2025</span> <strong>Ozernov-Palchik, O.</strong>, Elizee, Z., Catania, F., Hacikamiloglu, M., Shattuck-Hufnagel, S., Petscher, Y., Ghosh, S., &amp; Gabrieli, J.D.E. Universal literacy screening fails to connect students to intervention: A 50-state review. <em>Scientific Studies of Reading</em>.</li>
+
+                <li><span class="year-label">2024</span> Shangguan, Z., Huang, Z., <strong>Ozernov-Palchik, O.</strong>, Ohn-Bar, E., Kosty, D., Stoolmiller, M., &amp; Fien, H. Scalable early childhood reading performance prediction. <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>, 38(21), 23362&ndash;23370.</li>
+
+                <li><span class="year-label">2024</span> <strong>Ozernov-Palchik, O.</strong>, Pollack, C., Bonawitz, E., Christodoulou, J. A., Gaab, N., Gabrieli, J. D., ... &amp; Nelson, C. A. Socioeconomic status and brain development. <em>Mind, Brain, and Education</em>, 18(3), 227&ndash;243.</li>
+
+                <li><span class="year-label">2023</span> <strong>Ozernov-Palchik, O.*</strong>, Qi, Z., Beach, S.D., Centanni, T., &amp; Gabrieli, J.D.E. Procedural and statistical learning in children with and without developmental dyslexia. <em>Journal of Speech, Language, and Hearing Research</em>, 66(8), 3048&ndash;3065.</li>
+
+                <li><span class="year-label">2023</span> Treves, I. N., Olson, H. A., <strong>Ozernov-Palchik, O.</strong>, Li, C. E., Wang, K. L., Arechiga, X. M., ... &amp; Gabrieli, J. D. The impact of a teacher-led mindfulness program on school climate in early elementary school. <em>Frontiers in Education</em>, 8, 1195862.</li>
+
+                <li><span class="year-label">2023</span> Treves, I. N., Li, C. E., Wang, K. L., <strong>Ozernov-Palchik, O.</strong>, Olson, H. A., &amp; Gabrieli, J. D. Mindfulness supports emotional resilience in children during COVID-19. <em>Behavioral Sciences</em>, 13(6), 460.</li>
+
+                <li><span class="year-label">2023</span> <strong>Ozernov-Palchik, O.</strong>, Sury, D., Turesky, T. K., Yu, X., &amp; Gaab, N. Longitudinal changes in brain activation underlying reading fluency. <em>Human Brain Mapping</em>, 44(1), 18&ndash;34.</li>
+
+                <li><span class="year-label">2022</span> <strong>Ozernov-Palchik, O.*</strong>, Sideridis, G. D., Norton, E. S., Beach, S. D., Wolf, M., Gabrieli, J. D., &amp; Gaab, N. On the misuse of regression to identify profiles and trajectories. <em>Journal of Learning Disabilities</em>, 55(6), 470&ndash;483.</li>
+
+                <li><span class="year-label">2022</span> Davison, K. E., Zuk, J., Mullin, L. J., <strong>Ozernov-Palchik, O.</strong>, Norton, E., Gabrieli, J., ... &amp; Gaab, N. Examining prereading brain measures in association with later reading outcomes. <em>Journal of Learning Disabilities</em>, 55(4), 280&ndash;295.</li>
+
+                <li><span class="year-label">2022</span> Beach, S. D., <strong>Ozernov-Palchik, O.</strong>, May, S. C., Centanni, T. M., Perrachione, T. K., Pantazis, D., &amp; Gabrieli, J. D. Brain to text: Decoding spoken phrases from phone representations in the brain. <em>Frontiers in Human Neuroscience</em>, 15, 785693.</li>
+
+                <li><span class="year-label">2022</span> <strong>Ozernov-Palchik, O.*</strong>, Olson, H. A.*, Arechiga, X. M., Kentala, H., Solorio-Fielder, J. L., Camacho Torres, Y., ... &amp; Gabrieli, J. D. Implementing remote developmental research: A case study of a randomized controlled trial. <em>Frontiers in Psychology</em>, 13, 916081.</li>
+
+                <li><span class="year-label">2022</span> <strong>Ozernov-Palchik, O.</strong>, Beach, S. D., Brown, M., Centanni, T., Gaab, N., Kuperberg, G., ... &amp; Gabrieli, J. Speech-specific perceptual adaptation deficits in children and adults with dyslexia. <em>Journal of Experimental Psychology: General</em>, 151(6), 1324&ndash;1343.</li>
+
+                <li><span class="year-label">2022</span> Centanni, T. M., Beach, S. D., <strong>Ozernov-Palchik, O.</strong>, May, S., Pantazis, D., &amp; Gabrieli, J. D. Categorical perception of speech consonants is not impaired in children with dyslexia. <em>Neurobiology of Language</em>, 3(2), 275&ndash;296.</li>
+
+                <li><span class="year-label">2021</span> <strong>Ozernov-Palchik, O.</strong>, Centanni, T. M., Beach, S. D., May, S., Hogan, T., &amp; Gabrieli, J. D. Distinct neural substrates of subcomponents of reading comprehension. <em>NeuroImage</em>, 243, 118529.</li>
+
+                <li><span class="year-label">2021</span> Norton, E. S., Beach, S. D., Eddy, M. D., McWeeny, S., <strong>Ozernov-Palchik, O.</strong>, Gaab, N., &amp; Gabrieli, J. D. ERP mismatch negativity amplitude and asymmetry reflect phonological and rapid naming skills in English-speaking kindergartners. <em>Frontiers in Human Neuroscience</em>, 15, 624617.</li>
+
+                <li><span class="year-label">2021</span> Beach, S. D., <strong>Ozernov-Palchik, O.</strong>, May, S. C., Centanni, T. M., Gabrieli, J. D., &amp; Pantazis, D. Neural decoding reveals concurrent phonological and orthographic feature representations. <em>NeuroImage</em>, 241, 118425.</li>
+
+                <li><span class="year-label">2020</span> Zuk, J., Dunstan, J., Norton, E., Yu, X., <strong>Ozernov-Palchik, O.</strong>, Wang, Y., Hogan, T., Gabrieli, J.D.E., &amp; Gaab, N. Multifactorial pathways facilitate resilience among kindergartners at risk for dyslexia. <em>Developmental Science</em>, 24(2), e13024.</li>
+
+                <li><span class="year-label">2020</span> Yu, X., Zuk, J., Perdue, M. V., <strong>Ozernov-Palchik, O.</strong>, Raney, T., Beach, S. D., ... &amp; Gaab, N. Putative protective neural mechanisms in prereaders with a family history of dyslexia. <em>Human Brain Mapping</em>, 41(10), 2827&ndash;2845.</li>
+
+                <li><span class="year-label">2019</span> Centanni, T. M., Norton, E. S., <strong>Ozernov-Palchik, O.</strong>, Park, A., Beach, S.D., Halverson, K., Gaab, N., &amp; Gabrieli, J. D. E. Early development of letter specialization in left fusiform is associated with better word reading. <em>Developmental Science</em>, 22(5), e12813.</li>
+
+                <li><span class="year-label">2019</span> <strong>Ozernov-Palchik, O.</strong>, Norton, E. S., Wang, Y., Beach, S. D., Zuk, J., Wolf, M., &amp; Gaab, N. The relationship between socioeconomic status and white matter microstructure in pre-reading children. <em>Human Brain Mapping</em>, 40(10), 2973&ndash;2984.</li>
+
+                <li><span class="year-label">2018</span> <strong>Ozernov-Palchik, O.</strong> &amp; Gabrieli, J. D. E. Neuroimaging, early identification, and personalized intervention for developmental dyslexia. <em>Perspectives on Language and Literacy</em>, 44(3), 15&ndash;22.</li>
+
+                <li><span class="year-label">2018</span> <strong>Ozernov-Palchik, O.</strong>, Wolf, M., &amp; Patel, A.D. Relationships between early literacy and nonlinguistic rhythmic processes in kindergarteners. <em>Journal of Experimental Child Psychology</em>, 167, 354&ndash;368.</li>
+
+                <li><span class="year-label">2018</span> <strong>Ozernov-Palchik, O.</strong> &amp; Patel, A.D. Musical rhythm and reading development: Does beat matter? <em>Annals of the New York Academy of Sciences</em>, 1423(1), 166&ndash;175.</li>
+
+                <li><span class="year-label">2018</span> Centanni, T. M., Norton, E. S., Park, A., Beach, S.D., Halverson, K., <strong>Ozernov-Palchik, O.</strong>, Gaab, N., &amp; Gabrieli, J. D. E. Early development of letter specialization in left fusiform. <em>Developmental Science</em>, 21(4), e12602.</li>
+
+                <li><span class="year-label">2018</span> Yu, X., Raney, T., Perdue, M. V., Zuk, J., <strong>Ozernov-Palchik, O.</strong>, Becker, B.L.C., Raschle, N. M., &amp; Gaab, N. Emergence of the neural network underlying phonological processing. <em>NeuroImage</em>, 165, 251&ndash;264.</li>
+
+                <li><span class="year-label">2017</span> Zuk, J., Bishop-Liebler, P., <strong>Ozernov-Palchik, O.</strong>, Moore, E., Overy, K., Welch, G., &amp; Gaab, N. Revisiting the "enigma" of musicians with dyslexia. <em>Journal of Learning Disabilities</em>, 50(6), 655&ndash;670.</li>
+
+                <li><span class="year-label">2016</span> <strong>Ozernov-Palchik, O.</strong> &amp; Gaab, N. Lessons to be learned: How a comprehensive neurobiological model of atypical reading can inform educational practice. <em>Current Opinion in Behavioral Sciences</em>, 10, 45&ndash;58.</li>
+
+                <li><span class="year-label">2016</span> <strong>Ozernov-Palchik, O.</strong>, Norton, E.S., Sideridis, G., Beach, S., Wolf, M., Gabrieli, J.D.E., &amp; Gaab, N. Longitudinal stability of pre-reading skill profiles of kindergarten children. <em>Developmental Science</em>, 20(5), e12471.</li>
+
+                <li><span class="year-label">2016</span> <strong>Ozernov-Palchik, O.</strong> &amp; Gaab, N. Tackling the "dyslexia paradox": Reading brain and behavior for early markers of developmental dyslexia. <em>WIREs Cognitive Science</em>, 7(2), 156&ndash;176.</li>
+
+                <li><span class="year-label">2015</span> Norton, E. S., Saygin, Z. M., Osher, D. E., Beach, S.D., Cyr, A.B., <strong>Ozernov-Palchik, O.</strong>, Yendiki, A., Fischl, B., Gaab, N., &amp; Gabrieli, J. D. E. White matter structure in young children with histories of early language delay. <em>Brain</em>, 138(11), 3027&ndash;3041.</li>
+
+                <li><span class="year-label">2013</span> Zuk, J.*, <strong>Ozernov-Palchik, O.*</strong>, Kim, H., Lakshminarayanan, K., Gabrieli, J. D., Tallal, P., &amp; Gaab, N. Enhanced syllable discrimination thresholds in musicians. <em>PLoS ONE</em>, 8(12), e80546.</li>
+            </ul>
+
+            <h3 style="color:var(--primary);margin:32px 0 16px;">Book Chapters</h3>
+            <ul class="pub-list">
+                <li><span class="year-label">2018</span> Gaab, N., Yu, X., &amp; <strong>Ozernov-Palchik, O.</strong> Early atypical brain development in developmental dyslexia. In L. Verhoeven &amp; C. Perfetti (Eds.), <em>Dyslexia and Neuroscience</em>. John Benjamins.</li>
+
+                <li><span class="year-label">2018</span> Leon Guerrero, S., <strong>Ozernov-Palchik, O.</strong>, Gonzalez, M., Zuk, J., &amp; Gaab, N. Using tablet technology to screen for reading disabilities in preschoolers. In A. Grawemeyer et al. (Eds.), <em>Lecture Notes in Computer Science</em>. Springer.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Ola Ozernov-Palchik &middot; <a href="mailto:oozernov@mit.edu">oozernov@mit.edu</a> &middot; MIT McGovern Institute &middot; Boston University Wheelock College</p>
+    </footer>
 </body>
 </html>

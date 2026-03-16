@@ -3,137 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ola Ozernov-Palchik, Ph.D., is a Research Scientist at MIT's McGovern Institute for Brain Research and a Research Assistant Professor at Boston University's Wheelock College of Education and Human Development. Her research focuses on the cognitive neuroscience of language and literacy development, with an emphasis on advancing educational equity through AI and neuroscience.">
-    <meta name="keywords" content="Ola Ozernov-Palchik, PhD, MIT, Boston University, McGovern Institute, Wheelock College of Education and Human Development, AI in Education, Cognitive Neuroscience, Language Development, Literacy Development, Educational Equity, Dyslexia Research">
+    <meta name="description" content="Ola Ozernov-Palchik, Ph.D. — Research Scientist at MIT's McGovern Institute and Research Assistant Professor at Boston University. Founder and Director of the EVAL Initiative. Research in cognitive neuroscience of literacy, AI in education, and dyslexia.">
+    <meta name="keywords" content="Ola Ozernov-Palchik, PhD, MIT, Boston University, McGovern Institute, EVAL, AI in Education, Cognitive Neuroscience, Literacy, Dyslexia, Neuroimaging, fMRI, Reading Development">
     <meta name="author" content="Ola Ozernov-Palchik">
-    <title>Ola Ozernov-Palchik, PhD.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ola Ozernov-Palchik, Ph.D.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        :root {
+            --primary: #1a3a5c;
+            --accent: #c41230;
+            --text: #333;
+            --light: #f7f8fa;
+            --border: #e0e4e8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        img {
-            display: block;
-            margin: 20px auto;
-            width: 300px;
-            height: auto;
-            border-radius: 50%;
-        }
-        h2 {
-            margin-top: 40px;
-            color: #444;
-        }
-        h3 {
-            margin-top: 30px;
-            color: #555;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        .references {
-            margin-top: 20px;
-        }
-        .references p {
-            margin-bottom: 10px;
-        }
-        strong {
-            font-weight: bold;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fff;
         }
         nav {
+            background: var(--primary);
+            padding: 14px 0;
             text-align: center;
-            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         nav a {
-            margin: 0 15px;
+            color: #fff;
             text-decoration: none;
-            color: #0066cc;
+            margin: 0 18px;
+            font-size: 0.95em;
+            letter-spacing: 0.3px;
+            transition: opacity 0.2s;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .contact-info {
+        nav a:hover { opacity: 0.8; }
+        nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5f8a 100%);
+            color: #fff;
+            padding: 60px 20px 50px;
             text-align: center;
-            margin-top: 20px;
         }
-        .contact-info a {
-            color: #333;
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .hero h1 { font-size: 2em; font-weight: 600; margin-bottom: 8px; }
+        .hero .subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+        }
+        .social a {
+            color: #fff;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
+            margin: 0 12px;
+            font-size: 1.1em;
+            opacity: 0.85;
+            transition: opacity 0.2s;
         }
-        .contact-info a:hover {
-            color: #0066cc;
+        .social a:hover { opacity: 1; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 50px 0; }
+        section:nth-child(even) { background: var(--light); }
+        h2 {
+            color: var(--primary);
+            font-size: 1.5em;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        h3 {
+            color: var(--primary);
+            font-size: 1.15em;
+            margin: 28px 0 10px;
+        }
+        p, li { margin-bottom: 14px; font-size: 0.95em; }
+        .project {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.2s;
+        }
+        section:nth-child(even) .project { background: #fff; }
+        .project:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .project h3 { margin-top: 0; }
+        .project .tag {
+            display: inline-block;
+            background: var(--light);
+            color: var(--primary);
+            font-size: 0.78em;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-right: 6px;
+            margin-bottom: 8px;
+            border: 1px solid var(--border);
+        }
+        .project a { color: var(--accent); text-decoration: none; }
+        .project a:hover { text-decoration: underline; }
+        .references {
+            font-size: 0.88em;
+            color: #555;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+        .references p { margin-bottom: 8px; }
+        .references a { color: var(--accent); }
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8edf2 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 24px;
+        }
+        .highlight-box p { margin-bottom: 0; }
+        .role-list { list-style: none; padding: 0; }
+        .role-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.93em;
+        }
+        .role-list li:last-child { border-bottom: none; }
+        .role-list .role-title { font-weight: 600; color: var(--primary); }
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 24px;
+            font-size: 0.85em;
+        }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        @media (max-width: 600px) {
+            nav a { margin: 0 8px; font-size: 0.85em; }
+            .hero { padding: 40px 16px 35px; }
+            .hero h1 { font-size: 1.5em; }
+            .hero img { width: 150px; height: 150px; }
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="publications.html">Publications</a> |
-        <a href="cv.html">CV</a> |
-        <a href="talks.html">Science Communication</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="talks.html">Talks</a>
     </nav>
 
-    <div class="container">
-        <h1>Ola Ozernov-Palchik, Ph.D.</h1>
+    <div class="hero">
         <img src="image001.jpg" alt="Ola Ozernov-Palchik">
-
-        <div class="contact-info">
-            <a href="https://twitter.com/olaozpa" target="_blank">
-                <i class="fab fa-twitter"></i> @olaozpa
-            </a>
-            <a href="https://osf.io/cf2z9" target="_blank">
-                <i class="fas fa-project-diagram"></i> OSF
-            </a>
-            <a href="https://github.com/oozernov" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
-
-        <p>Dr. Ola Ozernov-Palchik is a Research Assistant Professor at Boston University's Wheelock College of Education and Human Development and core faculty at the AI and Education Initiative. She is also a Research Scientist at MIT’s McGovern Institute for Brain Research. Dr. Ozernov-Palchik's multi-disciplinary research centers on the cognitive neuroscience of language and literacy development, with a strong emphasis on translational work aimed at advancing learning for all students and promoting educational equity. Her recent line of research includes harnessing and advancing AI to create effective, personalized, and scalable tools for literacy.</p>
-    </div>
-
-    <div class="container">
-        <h2>Ongoing Projects:</h2>
-
-        <h3>Conversational AI for Vocabulary Development and Educational Equity</h3>
-        <p>Vocabulary knowledge is the single best predictor of reading achievement and school completion. Young children vary in their vocabulary knowledge before the first day of kindergarten due to sociodemographic and developmental factors. Traditional educational approaches have failed to close these gaps, perhaps because they do not adapt to children's individual knowledge in a scalable fashion. We are developing and piloting a speech-based AI avatar designed to deliver tailored educational content in real-time. This avatar utilizes advanced NLP to engage children in interactive vocabulary teaching, adapting its responses to each child's progress. This platform is grounded in robust scientific research on how children learn language and is adapted from a randomized controlled trial conducted in the lab, which demonstrated its effectiveness in supporting children’s vocabulary learning (Ozernov-Palchik, Olson, et al., 2023; Olson, Ozernov-Palchik et al., under review).</p>
-
-        <div class="references">
-            <p><strong>Ozernov-Palchik, O*.</strong>, Olson, H. A*., Arechiga, X. M., Kentala, H., Solorio-Fielder, J. L., Wang, K. L., ... & Gabrieli, J. D. (2022). Implementing remote developmental research: A case study of a randomized controlled trial language intervention during COVID-19. Frontiers in Psychology, 12, 734375.</p>
-
-            <p>Olson, H*., <strong>Ozernov-Palchik, O*.</strong>, Arechiga, X., & Gabrieli, J. (2024). Remote text-supplemented audiobook intervention improves vocabulary knowledge in third and fourth-grade students. <a href="https://osf.io/zac9d/">https://osf.io/zac9d/</a>.</p>
-        </div>
-
-        <h3>Neurocognitive Basis of Reading Comprehension in Children with/without Dyslexia</h3>
-        <p>Developmental dyslexia affects 10-12% of all children and is a deficit in accurate or fluent word decoding. Many children with dyslexia continue to struggle with reading comprehension, the overall goal of reading, even after their decoding skills have been normalized, but little is known about the neurocognitive basis of impaired comprehension in dyslexia. Using a combination of neuroimaging and behavioral measures, this project investigates the components of reading comprehension in children with dyslexia in second and third grade, the earliest point at which dyslexia can be reliably identified. Our first paper from this project investigated the developmental trajectory of language lateralization, demonstrating that the language system is already left-lateralized by age 4, using cutting-edge fMRI approaches on large-scale datasets, and challenges the view that the language system is initially bilateral during early development.</p>
-
-        <div class="references">
-            <p><strong>Ozernov-Palchik, O*.</strong>, O'Brien, A.M.*, Lee, E.J., Richardson, H., Romeo, R., Lipkin, B., Small, H., Capella, J., Nieto-Castañón, A., Saxe, R., Gabrieli, J.D. & Fedorenko, E. (2024). Precision fMRI reveals that the language network exhibits adult-like left-hemispheric lateralization by 4 years of age. <a href="https://www.biorxiv.org/content/10.1101/2024.05.15.594172v2.abstract">https://www.biorxiv.org/content/10.1101/2024.05.15.594172v2.abstract</a>.</p>
-        </div>
-
-        <h3>Domain-Specific and General Learning Processes in Literacy Development and Dyslexia</h3>
-        <p>This research focuses on understanding the learning mechanisms that support literacy development and the specific deficits that contribute to phonological impairments in developmental dyslexia. While individuals with developmental dyslexia exhibit broader perceptual deficits in the auditory domain, their implicit learning deficits are particularly pronounced in the linguistic domain, such as in speech perception. My work, using psycholinguistic, procedural learning, and statistical learning experiments, reveals that individuals with dyslexia struggle with speech-specific perceptual adaptation and exhibit impaired neural representation of speech sounds. However, these deficits do not extend to non-linguistic auditory processing, such as tones. Interestingly, despite these challenges, individuals with dyslexia often achieve typical oral language, pointing to domain-specific learning abilities.</p>
-
-        <div class="references">
-            <p><strong>Ozernov-Palchik, O*.</strong>, Qi, Z., Beach, S.D., Centanni, T., Gabrieli, J.D.E. (2023). Procedural and statistical learning in individuals with dyslexia. Neuropsychologia.</p>
-
-            <p>Beach, S. D., <strong>Ozernov-Palchik, O.</strong>, May, S. C., Centanni, T. M., Perrachione, T. K., Pantazis, D., & Gabrieli, J. D. (2022). The Neural Representation of a Repeated Standard Stimulus in Dyslexia. Frontiers in Human Neuroscience, 283.</p>
-
-            <p><strong>Ozernov-Palchik, O.</strong>, Beach, S. D., Brown, M., Centanni, T., Gaab, N., Kuperberg, G., ... & Gabrieli, J. (2022). Speech-specific perceptual adaptation deficits in children and adults with dyslexia. Journal of Experimental Psychology: General.</p>
-
-            <p>Shangguan, Z., Huang, Z., Ohn-Bar, E., <strong>Ozernov-Palchik, O.</strong>, Kosty, D., Stoolmiller, M., & Fien, H. (2024). Scalable early childhood reading performance prediction. NeurIPS 2024 Datasets and Benchmarks Track Submission.</p>
+        <h1>Ola Ozernov-Palchik, Ph.D.</h1>
+        <p class="subtitle">
+            Research Scientist, MIT McGovern Institute for Brain Research<br>
+            Research Assistant Professor, Boston University Wheelock College<br>
+            Founder &amp; Director, <a href="https://www.bu.edu/hic/centers-initiatives-labs/eval/" style="color:#fff;text-decoration:underline">EVAL Initiative</a>
+        </p>
+        <div class="social">
+            <a href="https://scholar.google.com/citations?user=JG4SKDsAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+            <a href="https://github.com/oozernov" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://osf.io/cf2z9" target="_blank"><i class="fas fa-flask"></i> OSF</a>
+            <a href="https://twitter.com/olaozpa" target="_blank"><i class="fab fa-twitter"></i> @olaozpa</a>
         </div>
     </div>
+
+    <section>
+        <div class="container">
+            <h2>About</h2>
+            <p>I am a cognitive neuroscientist studying how children learn to read and why some struggle. My work bridges neuroimaging, AI, and education policy to advance literacy for all students. I use precision fMRI to map the developing reading brain, build and evaluate AI-powered literacy tools, and translate research findings into actionable guidance for educators and policymakers.</p>
+            <p>I founded the <a href="https://www.bu.edu/hic/centers-initiatives-labs/eval/" style="color:var(--accent)">Evidence-Based AI in Learning (EVAL) Initiative</a> at Boston University to provide independent, rigorous evaluation of AI-enabled educational tools before they scale in schools.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Leadership &amp; Service</h2>
+            <ul class="role-list">
+                <li><span class="role-title">Founder &amp; Director</span> &mdash; Evidence-Based AI in Learning (EVAL) Initiative, Boston University (2025&ndash;Present)</li>
+                <li><span class="role-title">Associate Director of Translational Research</span> &mdash; AI &amp; Education Initiative, Boston University (2025&ndash;Present)</li>
+                <li><span class="role-title">Associate Editor</span> &mdash; Scientific Studies of Reading (2025&ndash;Present)</li>
+                <li><span class="role-title">President</span> &mdash; New England Research on Dyslexia Society (NERDY) (2024&ndash;Present)</li>
+                <li><span class="role-title">Advisory Council Member</span> &mdash; NYC Public Schools AI Advisory Council (2024&ndash;Present)</li>
+                <li><span class="role-title">Scientific Advisor</span> &mdash; Massachusetts Literacy Bill Implementation (2024&ndash;Present)</li>
+                <li><span class="role-title">Conference Organizer</span> &mdash; The Dyslexia Foundation (2023&ndash;Present)</li>
+                <li><span class="role-title">Founder &amp; Director</span> &mdash; Brookline Literacy Coalition (2022&ndash;Present)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Research</h2>
+
+            <div class="project">
+                <h3>EVAL: Evidence-Based AI in Learning</h3>
+                <span class="tag">AI in Education</span>
+                <span class="tag">RCT Design</span>
+                <span class="tag">EdTech Evaluation</span>
+                <p>I founded and direct the <a href="https://www.bu.edu/hic/centers-initiatives-labs/eval/">EVAL Initiative</a>, an independent research collaborative that conducts rigorous evaluations of AI-enabled educational tools. Operating as an "FDA for Education," EVAL coordinates 10+ partner institutions across academia, industry, and policy to ensure AI tools demonstrate genuine learning impact before scaling in schools. Our current flagship project is a Bayesian-designed 3-arm RCT evaluating an AI reading tutor against human tutoring for 1st&ndash;2nd graders. <a href="https://github.com/oozernov/EVAL">GitHub</a></p>
+            </div>
+
+            <div class="project">
+                <h3>Conversational AI for Vocabulary Development and Educational Equity</h3>
+                <span class="tag">AI</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Vocabulary</span>
+                <span class="tag">RCT</span>
+                <p>Vocabulary knowledge is the single best predictor of reading achievement and school completion. We developed and tested a speech-based AI avatar that delivers tailored vocabulary instruction in real-time, adapting to each child's progress via advanced NLP. A randomized controlled trial demonstrated effectiveness for vocabulary learning, with scaffolded instruction particularly benefiting struggling readers (d = 0.69&ndash;0.74).</p>
+                <div class="references">
+                    <p>Olson, H.* &amp; <strong>Ozernov-Palchik, O.*</strong> et al. (In Press). Improvements on proximal vocabulary measures do not generalize to distal reading comprehension measures. <em>Journal of Research on Educational Effectiveness</em>. <a href="https://osf.io/zac9d/">OSF</a></p>
+                    <p><strong>Ozernov-Palchik, O.*</strong>, Olson, H. A.* et al. (2022). Implementing remote developmental research: A case study of a randomized controlled trial. <em>Frontiers in Psychology</em>.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Neurocognitive Basis of Reading and Language Development</h3>
+                <span class="tag">fMRI</span>
+                <span class="tag">Neuroimaging</span>
+                <span class="tag">Language Lateralization</span>
+                <span class="tag">Dyslexia</span>
+                <p>Using precision fMRI on large-scale datasets, we demonstrated that the language-selective network is already left-lateralized by age 4 &mdash; challenging the long-held view that language is initially bilateral during early development. This work also investigates the neural substrates of reading comprehension in children with dyslexia, revealing distinct neural components underlying word decoding and higher-level comprehension processes.</p>
+                <div class="references">
+                    <p><strong>Ozernov-Palchik, O.*</strong>, O'Brien, A.M.* et al. (In Press). Precision fMRI reveals that the language-selective network is established in early childhood. <em>Developmental Science</em>.</p>
+                    <p><strong>Ozernov-Palchik, O.</strong> et al. (2021). Distinct neural substrates of subcomponents of reading comprehension. <em>NeuroImage</em>.</p>
+                    <p><strong>Ozernov-Palchik, O.</strong>, Sury, D. et al. (2023). Longitudinal changes in brain activation underlying reading fluency. <em>Human Brain Mapping</em>.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Learning Mechanisms in Literacy and Dyslexia</h3>
+                <span class="tag">Dyslexia</span>
+                <span class="tag">Speech Perception</span>
+                <span class="tag">Statistical Learning</span>
+                <span class="tag">MEG/EEG</span>
+                <p>Individuals with dyslexia exhibit speech-specific perceptual adaptation deficits and impaired neural representation of speech sounds, but these deficits do not extend to non-linguistic auditory processing. Despite these challenges, they achieve typical oral language &mdash; pointing to domain-specific learning mechanisms. This work uses psycholinguistic, procedural learning, and statistical learning paradigms combined with neural decoding approaches.</p>
+                <div class="references">
+                    <p><strong>Ozernov-Palchik, O.</strong> et al. (2022). Speech-specific perceptual adaptation deficits in children and adults with dyslexia. <em>Journal of Experimental Psychology: General</em>.</p>
+                    <p><strong>Ozernov-Palchik, O.*</strong>, Qi, Z. et al. (2023). Procedural and statistical learning in children with and without developmental dyslexia. <em>JSLHR</em>.</p>
+                    <p>Beach, S. D., <strong>Ozernov-Palchik, O.</strong> et al. (2022). Brain to text: Decoding spoken phrases from phone representations. <em>Frontiers in Human Neuroscience</em>.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Universal Literacy Screening and Early Identification</h3>
+                <span class="tag">Policy</span>
+                <span class="tag">Screening</span>
+                <span class="tag">AI</span>
+                <span class="tag">Prediction</span>
+                <p>A 50-state review revealed that universal literacy screening fails to connect students to intervention &mdash; a "leaky pipeline" from identification to instruction. We are developing AI-based approaches to scalable early reading prediction and investigating how technology can bridge this gap.</p>
+                <div class="references">
+                    <p><strong>Ozernov-Palchik, O.</strong> et al. (2025). Universal literacy screening fails to connect students to intervention: A 50-state review. <em>Scientific Studies of Reading</em>.</p>
+                    <p>Shangguan, Z. et al. (incl. <strong>Ozernov-Palchik, O.</strong>) (2024). Scalable early childhood reading performance prediction. <em>AAAI 2024</em>.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Ola Ozernov-Palchik &middot; <a href="mailto:oozernov@mit.edu">oozernov@mit.edu</a> &middot; MIT McGovern Institute &middot; Boston University Wheelock College</p>
+    </footer>
 </body>
 </html>

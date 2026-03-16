@@ -3,67 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talks and Science Communication - Ola Ozernov-Palchik, PhD</title>
+    <title>Talks - Ola Ozernov-Palchik, Ph.D.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        :root {
+            --primary: #1a3a5c;
+            --accent: #c41230;
+            --text: #333;
+            --light: #f7f8fa;
+            --border: #e0e4e8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fff;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
-        h1 {
+        nav {
+            background: var(--primary);
+            padding: 14px 0;
             text-align: center;
-            color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        h2 {
-            margin-top: 40px;
-            color: #444;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 20px;
-        }
-        a {
-            color: #0066cc;
+        nav a {
+            color: #fff;
             text-decoration: none;
+            margin: 0 18px;
+            font-size: 0.95em;
+            letter-spacing: 0.3px;
+            transition: opacity 0.2s;
         }
-        a:hover {
-            text-decoration: underline;
+        nav a:hover { opacity: 0.8; }
+        nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 50px 0; }
+        section:nth-child(even) { background: var(--light); }
+        h2 {
+            color: var(--primary);
+            font-size: 1.5em;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        h3 {
+            color: var(--primary);
+            font-size: 1.15em;
+            margin: 28px 0 12px;
+        }
+        .talk-list { list-style: none; padding: 0; }
+        .talk-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.93em;
+        }
+        .talk-list li:last-child { border-bottom: none; }
+        .talk-list a { color: var(--accent); text-decoration: none; }
+        .talk-list a:hover { text-decoration: underline; }
+        .year-header {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.85em;
+            padding: 4px 14px;
+            border-radius: 14px;
+            margin: 24px 0 12px;
+        }
+        .media-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            transition: box-shadow 0.2s;
+            font-size: 0.93em;
+        }
+        section:nth-child(even) .media-card { background: #fff; }
+        .media-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .media-card a { color: var(--accent); text-decoration: none; }
+        .media-card a:hover { text-decoration: underline; }
+        .tag {
+            display: inline-block;
+            background: var(--light);
+            color: var(--primary);
+            font-size: 0.75em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-right: 4px;
+        }
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 24px;
+            font-size: 0.85em;
+        }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        @media (max-width: 600px) {
+            nav a { margin: 0 8px; font-size: 0.85em; }
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="publications.html">Publications</a> |
-        <a href="cv.html">CV</a> |
-        <a href="talks.html">Science Communication</a>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="talks.html" class="active">Talks</a>
     </nav>
 
-    <div class="container">
-        <h1>Science Communication</h1>
+    <section>
+        <div class="container">
+            <h2>Selected Invited Talks</h2>
 
-        <h2>Podcasts</h2>
-        <ul>
-    <li><a href="https://podcasts.apple.com/us/podcast/ola-ozernov-palchik-neuroscience-risk-and-dyslexia/id1728741980?i=1000658433083" target="_blank">🎧 Apple Podcast: How Science Informs Policy and Practice on Reading</a></li>
-            <li><a href="https://podcasts.apple.com/us/podcast/ola-ozernov-palchik-neuroscience-risk-and-dyslexia/id1728741980?i=1000658433083" target="_blank">Apple Podcast: Debunking myths about co-opted reading science</a></li>
-            <li><a href="https://open.spotify.com/episode/0xUrPoFh4cZIaTToX5lxrR" target="_blank">Spotify: Neuroscience, Risk, and Dyslexia</a></li>
-        </ul>
+            <div class="year-header">2026</div>
+            <ul class="talk-list">
+                <li><strong>The Reading Brain in the Age of AI: An Evidence-Based Perspective.</strong> The Reading League, 10th Annual Conference, Chicago, IL. October 2026.</li>
+                <li><strong>The Dyslexia Foundation, 22nd Extraordinary Brain Symposium.</strong> El Convento, Old San Juan, Puerto Rico. May 2026.</li>
+                <li><strong>Neurocognitive Foundations of Literacy: Typical Development and Dyslexia.</strong> Center for Educational Neuroscience Applications (CENA), Bridgewater State University. April 2026.</li>
+                <li><strong>(Not so) universal literacy screening: The leaky pipeline from identification to instruction and can AI help?</strong> Lunch &amp; Learn, MIT. March 2026.</li>
+                <li><strong>From brain to policy: Building evidence-based systems for better literacy outcomes.</strong> PREREQ Seminar, Boston University. February 2026.</li>
+            </ul>
 
-        <h2>Talks</h2>
-        <ul>
-            <li><a href="https://www.youtube.com/watch?v=ag0chCKxg9Y" target="_blank">Brookline Parent Organization, 2021</a></li>
-            <li><a href="https://www.youtube.com/watch?v=vW6NPZAdgjU&t=222s" target="_blank">MIT Science of Reading Symposium</a></li>
-            <li><a href="https://www.youtube.com/watch?v=QXb9W-5GEI8" target="_blank">Games of Change Festival</a></li>
-            <li><a href="https://www.youtube.com/watch?v=GVlKbWNIP3A" target="_blank">MIT Story Slam</a></li>
-            <li><a href="https://dyslexiafoundation.org/tdfc-harvard-2017-ola-ozernov-palchik-ms-neurological-differences-in-dyslexia-and-literacy/" target="_blank">The Dyslexia Foundation: Dyslexia and Literacy Conference</a></li>
-        </ul>
-    </div>
+            <div class="year-header">2025</div>
+            <ul class="talk-list">
+                <li><strong>From early development to practice: The neurocognitive foundations of literacy.</strong> Child Mind Institute Visiting Professor Lecture Series, New York, NY. December 2025.</li>
+                <li><strong>Explicit instruction to build vocabulary knowledge for reading comprehension.</strong> The Dyslexia Foundation Conference, Boston, MA. November 2025.</li>
+                <li><strong>Navigating tomorrow: Embracing AI across the curriculum.</strong> Annual Zelma Wynn Symposium, Summit School, Edgewater, MD. October 2025.</li>
+                <li><strong>Neural systems underlying reading comprehension: Language and beyond.</strong> Big Sky Literacy Summit, Big Sky, MT. August 2025.</li>
+                <li><strong>Developing vocabulary knowledge through text-supplemented audiobooks and scalable human and AI tutoring.</strong> Big Sky Literacy Summit, Big Sky, MT. August 2025.</li>
+                <li><strong>Smart Start: Leveraging technology to detect and support learning differences early.</strong> Campaign for Grade-Level Reading (CGLR). June 2025.</li>
+                <li><strong>Reverse-engineering human tutoring: Building scalable AI for literacy.</strong> MIT Lincoln Laboratory, Lexington, MA. May 2025.</li>
+                <li><strong>The neuroscience of reading: Tracing literacy from language to comprehension.</strong> Annual Zelma Wynn Symposium, Summit School, Edgewater, MD. March 2025.</li>
+                <li><strong>Reading to learn, learning to engage.</strong> Thriving in the Middle School Years: BU Wheelock Forum, Boston University. February 2025.</li>
+            </ul>
+
+            <div class="year-header">2024</div>
+            <ul class="talk-list">
+                <li><strong>Neuroscience of reading.</strong> The Dyslexia Foundation Conference, MGH Institute of Health Professions, Boston, MA. November 2024.</li>
+                <li><strong>Investigating the neurocognitive substrates of typical and atypical literacy development.</strong> University of Texas at Dallas. November 2024.</li>
+            </ul>
+
+            <div class="year-header">2023</div>
+            <ul class="talk-list">
+                <li><strong>Harnessing Technology to Advance Education.</strong> XtraordinaryPeople, NYC. November 2023.</li>
+                <li><strong>Towards Precise and Adaptive Education through AI Integration.</strong> Symposium on Improving the Lives of Families and Children, MIT. October 2023.</li>
+                <li><strong>Open-Source Infrastructure for Student Learning Disability Identification and Treatment.</strong> Red Hat North America Research Interest Group Meeting. October 2023.</li>
+                <li><strong>Cognitive and neural substrates of typical and atypical reading development.</strong> NWEA Meeting. March 2023.</li>
+                <li><strong>Teaching Reading in Contentious Times: Panel Discussion.</strong> Brandeis University, Waltham, MA. September 2023.</li>
+            </ul>
+
+            <div class="year-header">2017&ndash;2022</div>
+            <ul class="talk-list">
+                <li><strong>Reading development and developmental dyslexia.</strong> Harvard University. April 2022.</li>
+                <li><strong>Neurocognitive mechanisms of individual differences in reading comprehension.</strong> University of Connecticut. March 2022.</li>
+                <li><strong>Neurocognitive mechanisms of individual differences in reading comprehension.</strong> Florida State University. February 2022.</li>
+                <li><strong>Neurocognitive mechanisms of individual differences in reading comprehension.</strong> Vanderbilt University. January 2022.</li>
+                <li><strong>Comprehending the same, differently.</strong> Department of Psychology, Tufts University. September 2021.</li>
+                <li><strong>Neural underpinnings of language comprehension in dyslexia.</strong> Boston Children's Hospital. February 2020.</li>
+                <li><strong>From early identification to comprehension: Using neuroimaging to study reading.</strong> International Dyslexia Association, Portland, OR. November 2019.</li>
+                <li><strong>Why children fail to learn to read.</strong> Safra Brain Research Center, Hebrew University, Jerusalem, Israel. October 2018.</li>
+                <li><strong>Linking Rhythm Processing and Reading Development.</strong> Games for Change Festival, New York, NY. June 2018.</li>
+                <li><strong>Cognitive links between rhythm perception and reading.</strong> Inaugural National Dyslexia Symposium, MIT. February 2018.</li>
+                <li><strong>Neurological differences in dyslexia and literacy.</strong> The Dyslexia Foundation Conference, Harvard Medical School. November 2017.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Media &amp; Podcasts</h2>
+
+            <div class="year-header">2026</div>
+            <div class="media-card"><span class="tag">Podcast</span> <a href="https://www.youtube.com/watch?v=DrUsx8i-AxU" target="_blank">Bridging early literacy, brain research, and AI innovation</a>. Palmer Media.</div>
+            <div class="media-card"><span class="tag">Podcast</span> The science of reading formula. Malia Hollowell Podcast.</div>
+            <div class="media-card"><span class="tag">Podcast</span> <a href="https://www.bostonglobe.com/2026/03/12/opinion/literacy-ai-say-more-podcast/" target="_blank">US literacy rates are shocking. Will AI save us?</a> Say More, <em>Boston Globe</em>. March 2026.</div>
+            <div class="media-card"><span class="tag">Op-Ed</span> <a href="https://www.bostonglobe.com/2026/02/26/opinion/mass-needs-catch-up-with-mississippi-reading-instruction/" target="_blank">Mass. needs to catch up with Mississippi on reading instruction</a>. <em>Boston Globe</em>. February 2026.</div>
+
+            <div class="year-header">2025</div>
+            <div class="media-card"><span class="tag">Article</span> Evidence over hype: Building AI that actually works for education. <em>EdTech Digest</em>.</div>
+            <div class="media-card"><span class="tag">Article</span> Why do so many kids struggle with reading? <em>The Brink</em>, Boston University.</div>
+            <div class="media-card"><span class="tag">Article</span> Identifying kids who need help learning to read isn't as easy as A, B, C. <em>MIT News</em>.</div>
+            <div class="media-card"><span class="tag">Article</span> Literacy screening programs are failing young learners. <em>Futurity</em>.</div>
+            <div class="media-card"><span class="tag">Podcast</span> Dr. Ola Ozernov-Palchik on neuroscience, literacy &amp; scalable human + AI tutoring. <em>The Literacy View</em>.</div>
+            <div class="media-card"><span class="tag">Podcast</span> The neuroscience of reading and dyslexia, Parts 1 &amp; 2. <em>Literacy Sparks</em>, Episodes 21&ndash;22.</div>
+
+            <div class="year-header">2024</div>
+            <div class="media-card"><span class="tag">Podcast</span> <a href="https://podcasts.apple.com/us/podcast/ola-ozernov-palchik-neuroscience-risk-and-dyslexia/id1728741980?i=1000658433083" target="_blank">Neuroscience, Risk, and Dyslexia</a>. Apple Podcast.</div>
+            <div class="media-card"><span class="tag">Podcast</span> <a href="https://open.spotify.com/episode/0xUrPoFh4cZIaTToX5lxrR" target="_blank">Debunking Myths about Co-Opted Reading Science</a>. Spotify.</div>
+
+            <div class="year-header">2020&ndash;2022</div>
+            <div class="media-card"><span class="tag">Video</span> <a href="https://www.youtube.com/watch?v=GVlKbWNIP3A" target="_blank">MIT McGovern Institute Story Slam</a>. 2020.</div>
+            <div class="media-card"><span class="tag">Article</span> Closing schools for COVID-19 does lifelong harm and widens inequality. <em>The Economist</em>. 2020.</div>
+            <div class="media-card"><span class="tag">Video</span> <a href="https://www.youtube.com/watch?v=vW6NPZAdgjU&t=222s" target="_blank">MIT Science of Reading Symposium</a>.</div>
+            <div class="media-card"><span class="tag">Video</span> <a href="https://www.youtube.com/watch?v=ag0chCKxg9Y" target="_blank">Brookline Parent Organization Talk</a>. 2021.</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Ola Ozernov-Palchik &middot; <a href="mailto:oozernov@mit.edu">oozernov@mit.edu</a> &middot; MIT McGovern Institute &middot; Boston University Wheelock College</p>
+    </footer>
 </body>
 </html>
