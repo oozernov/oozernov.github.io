@@ -114,6 +114,8 @@
         }
         .project a { color: var(--accent); text-decoration: none; }
         .project a:hover { text-decoration: underline; }
+        .eval-header { display: flex; align-items: center; gap: 12px; }
+        .eval-logo { width: 48px; height: 48px; object-fit: contain; }
         .references {
             font-size: 0.88em;
             color: #555;
@@ -165,7 +167,7 @@
     </nav>
 
     <div class="hero">
-        <img src="image001.jpg" alt="Ola Ozernov-Palchik">
+        <img src="headshot.jpg" alt="Ola Ozernov-Palchik">
         <h1>Ola Ozernov-Palchik, Ph.D.</h1>
         <p class="subtitle">
             Research Scientist, MIT McGovern Institute for Brain Research<br>
@@ -192,7 +194,10 @@
             <h2>Research</h2>
 
             <div class="project">
-                <h3>Evidence-Based AI in Learning (EVAL) Collaborative</h3>
+                <div class="eval-header">
+                    <img src="eval-logo.png" alt="EVAL Logo" class="eval-logo">
+                    <h3 style="margin:0">Evidence-Based AI in Learning (EVAL) Collaborative</h3>
+                </div>
                 <span class="tag">AI in Education</span>
                 <span class="tag">RCT Design</span>
                 <span class="tag">ESSA Standards</span>
