@@ -13,58 +13,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --primary: #1a3a5c;
-            --accent: #c41230;
+            --primary: #2d2d2d;
+            --accent: #555;
             --text: #333;
-            --light: #f7f8fa;
-            --border: #e0e4e8;
+            --light: #f5f5f5;
+            --border: #e0e0e0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.7;
             color: var(--text);
-            background: #fff;
+            background: #fafafa;
         }
         nav {
-            background: var(--primary);
+            background: #fff;
             padding: 14px 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border);
         }
         nav a {
-            color: #fff;
+            color: var(--primary);
             text-decoration: none;
             margin: 0 18px;
             font-size: 0.95em;
             letter-spacing: 0.3px;
-            transition: opacity 0.2s;
+            transition: color 0.2s;
         }
-        nav a:hover { opacity: 0.8; }
-        nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
+        nav a:hover { color: #000; }
+        nav a.active { border-bottom: 2px solid var(--primary); padding-bottom: 2px; }
         .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         section { padding: 50px 0; }
         h2 {
-            color: var(--primary);
+            color: #1a1a1a;
             font-size: 1.5em;
             margin-bottom: 24px;
             padding-bottom: 8px;
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 2px solid var(--border);
             display: inline-block;
         }
         .scholar-link {
-            background: linear-gradient(135deg, #f0f4f8 0%, #e8edf2 100%);
-            border-left: 4px solid var(--accent);
+            background: #fff;
+            border-left: 4px solid var(--border);
             padding: 20px 24px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 32px;
             font-size: 0.95em;
         }
-        .scholar-link a { color: var(--accent); text-decoration: none; font-weight: 600; }
-        .scholar-link a:hover { text-decoration: underline; }
+        .scholar-link a { color: #2d2d2d; text-decoration: underline; text-decoration-color: #ccc; font-weight: 600; }
+        .scholar-link a:hover { text-decoration-color: #333; }
         .pub-list { list-style: none; padding: 0; }
         .pub-list li {
             padding: 12px 0;
@@ -72,26 +73,28 @@
             font-size: 0.93em;
         }
         .pub-list li:last-child { border-bottom: none; }
-        .pub-list a { color: var(--accent); text-decoration: none; }
-        .pub-list a:hover { text-decoration: underline; }
+        .pub-list a { color: #2d2d2d; text-decoration: underline; text-decoration-color: #ccc; text-underline-offset: 2px; }
+        .pub-list a:hover { text-decoration-color: #333; }
         .year-label {
             display: inline-block;
-            background: var(--primary);
-            color: #fff;
+            background: var(--border);
+            color: #444;
             font-size: 0.78em;
+            font-weight: 600;
             padding: 2px 10px;
             border-radius: 12px;
             margin-right: 8px;
             vertical-align: middle;
         }
         footer {
-            background: var(--primary);
-            color: rgba(255,255,255,0.7);
+            background: #fff;
+            color: #999;
             text-align: center;
             padding: 24px;
             font-size: 0.85em;
+            border-top: 1px solid var(--border);
         }
-        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        footer a { color: #666; text-decoration: none; }
         @media (max-width: 600px) {
             nav a { margin: 0 8px; font-size: 0.85em; }
             .container { padding: 0 16px; }

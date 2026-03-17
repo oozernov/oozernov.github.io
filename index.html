@@ -68,78 +68,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --primary: #1a3a5c;
-            --accent: #c41230;
+            --primary: #2d2d2d;
+            --accent: #555;
             --text: #333;
-            --light: #f7f8fa;
-            --border: #e0e4e8;
+            --light: #f5f5f5;
+            --border: #e0e0e0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.7;
             color: var(--text);
-            background: #fff;
+            background: #fafafa;
         }
         nav {
-            background: var(--primary);
+            background: #fff;
             padding: 14px 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border);
         }
         nav a {
-            color: #fff;
+            color: var(--primary);
             text-decoration: none;
             margin: 0 18px;
             font-size: 0.95em;
             letter-spacing: 0.3px;
-            transition: opacity 0.2s;
+            transition: color 0.2s;
         }
-        nav a:hover { opacity: 0.8; }
-        nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
+        nav a:hover { color: #000; }
+        nav a.active { border-bottom: 2px solid var(--primary); padding-bottom: 2px; }
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #2c5f8a 100%);
-            color: #fff;
+            background: #fff;
+            color: var(--primary);
             padding: 60px 20px 50px;
             text-align: center;
+            border-bottom: 1px solid var(--border);
         }
         .hero img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 4px solid rgba(255,255,255,0.3);
+            border: 3px solid var(--border);
             object-fit: cover;
             margin-bottom: 20px;
         }
-        .hero h1 { font-size: 2em; font-weight: 600; margin-bottom: 8px; }
+        .hero h1 { font-size: 2em; font-weight: 600; margin-bottom: 8px; color: #1a1a1a; }
         .hero .subtitle {
             font-size: 1em;
-            opacity: 0.9;
+            color: #555;
             max-width: 700px;
             margin: 0 auto 20px;
             line-height: 1.5;
         }
+        .hero .subtitle a { color: var(--primary); }
         .social a {
-            color: #fff;
+            color: var(--primary);
             text-decoration: none;
             margin: 0 12px;
             font-size: 1.1em;
-            opacity: 0.85;
+            opacity: 0.7;
             transition: opacity 0.2s;
         }
         .social a:hover { opacity: 1; }
         .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         section { padding: 50px 0; }
-        section:nth-child(even) { background: var(--light); }
+        section:nth-child(even) { background: #fff; }
         h2 {
-            color: var(--primary);
+            color: #1a1a1a;
             font-size: 1.5em;
             margin-bottom: 24px;
             padding-bottom: 8px;
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 2px solid var(--border);
             display: inline-block;
         }
         h3 {
@@ -170,8 +173,8 @@
             margin-bottom: 8px;
             border: 1px solid var(--border);
         }
-        .project a { color: var(--accent); text-decoration: none; }
-        .project a:hover { text-decoration: underline; }
+        .project a { color: #2d2d2d; text-decoration: underline; text-decoration-color: #ccc; text-underline-offset: 2px; }
+        .project a:hover { text-decoration-color: #333; }
         .eval-header { display: flex; align-items: center; gap: 12px; }
         .eval-logo { width: 48px; height: 48px; object-fit: contain; }
         .references {
@@ -182,7 +185,7 @@
             border-top: 1px solid var(--border);
         }
         .references p { margin-bottom: 8px; }
-        .references a { color: var(--accent); }
+        .references a { color: #2d2d2d; }
         .highlight-box {
             background: linear-gradient(135deg, #f0f4f8 0%, #e8edf2 100%);
             border-left: 4px solid var(--accent);
@@ -200,13 +203,14 @@
         .role-list li:last-child { border-bottom: none; }
         .role-list .role-title { font-weight: 600; color: var(--primary); }
         footer {
-            background: var(--primary);
-            color: rgba(255,255,255,0.7);
+            background: #fff;
+            color: #999;
             text-align: center;
             padding: 24px;
             font-size: 0.85em;
+            border-top: 1px solid var(--border);
         }
-        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        footer a { color: #666; text-decoration: none; }
         @media (max-width: 600px) {
             nav a { margin: 0 8px; font-size: 0.85em; }
             .hero { padding: 40px 16px 35px; }
@@ -243,8 +247,8 @@
     <section>
         <div class="container">
             <h2>About</h2>
-            <p>I am a cognitive neuroscientist, Research Assistant Professor at Boston University and Associate Director of Translational Research in the AI and Education Initiative at Wheelock College of Education &amp; Human Development and the Hariri Institute for Computing, and a Research Scientist at MIT's McGovern Institute for Brain Research. I direct the <a href="https://www.bu.edu/hic/centers-initiatives-labs/eval/" style="color:var(--accent)">Evidence-Based AI in Learning (EVAL) Collaborative</a>, which builds partnerships among researchers, schools, and technology developers to generate actionable evidence on AI tools through rigorous, independent evaluation.</p>
-            <p>My research investigates the neurocognitive foundations of language and literacy, how these systems develop and diverge in dyslexia, and how this knowledge can inform early identification, instruction, and intervention. This work spans precision neuroimaging, scalable AI tutoring, and innovative clinical trial designs for educational technology, and has appeared in leading journals including <em>Nature Communications</em>, <em>NeuroImage</em>, and <em>Developmental Science</em>. I am a recipient of the <a href="https://dyslexiaida.org/award-recipients/" style="color:var(--accent)">International Dyslexia Association Early Career Award</a> and serve as President of NERDY (New England Research on Dyslexia) and as Associate Editor of <em>Scientific Studies of Reading</em>.</p>
+            <p>I am a cognitive neuroscientist, Research Assistant Professor at Boston University and Associate Director of Translational Research in the AI and Education Initiative at Wheelock College of Education &amp; Human Development and the Hariri Institute for Computing, and a Research Scientist at MIT's McGovern Institute for Brain Research. I direct the <a href="https://www.bu.edu/hic/centers-initiatives-labs/eval/" style="color:#2d2d2d">Evidence-Based AI in Learning (EVAL) Collaborative</a>, which builds partnerships among researchers, schools, and technology developers to generate actionable evidence on AI tools through rigorous, independent evaluation.</p>
+            <p>My research investigates the neurocognitive foundations of language and literacy, how these systems develop and diverge in dyslexia, and how this knowledge can inform early identification, instruction, and intervention. This work spans precision neuroimaging, scalable AI tutoring, and innovative clinical trial designs for educational technology, and has appeared in leading journals including <em>Nature Communications</em>, <em>NeuroImage</em>, and <em>Developmental Science</em>. I am a recipient of the <a href="https://dyslexiaida.org/award-recipients/" style="color:#2d2d2d">International Dyslexia Association Early Career Award</a> and serve as President of NERDY (New England Research on Dyslexia) and as Associate Editor of <em>Scientific Studies of Reading</em>.</p>
             <p>I am committed to translating research into practice and policy. I contribute to literacy policy at the local, state, and national levels, advocating for evidence-based instruction in schools and working to ensure that educational technologies are held to the same rigorous standards we expect of other interventions that affect children's lives.</p>
         </div>
     </section>
